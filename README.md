@@ -5,7 +5,7 @@
 | Name | GitHub | Role | Contributions |
 |------|--------|------|---------------|
 | Mark Mwangi   |[@mwas12345spec](https://github.com/MaisoriKitayama) | Team Lead | Setup, Header component, API integration |
-| Team Member 2 | [@teammate2](https://github.com/teammate2) | Developer | Footer, Forms, Styling |
+| Ethen Mutiso| [@kaduskotoxic-driod](https://github.com/kaduskotoxic-driod) | Developer | Footer, Forms, Styling |
 | Team Member 3 | [@teammate3](https://github.com/teammate3) | Developer | Navigation, Routing |
 | Team Member 4 | [@teammate3](https://github.com/teammate3) | Developer | Navigation, Routing |
 | Team Member 5 | [@teammate3](https://github.com/teammate3) | Developer | Navigation, Routing |
