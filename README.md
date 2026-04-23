@@ -23,7 +23,7 @@
 - Implemented API calls
 - Code review for all PRs
 
-### Team Member 2
+### Ethen Mutiso
 - Built footer component
 - Styled all forms
 - Added responsive design
