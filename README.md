@@ -1,3 +1,5 @@
+
+
 # Contributors
 
 ## Team Members
@@ -6,7 +8,7 @@
 |------|--------|------|---------------|
 | Mark Mwangi   |[@mwas12345spec](https://github.com/MaisoriKitayama) | Team Lead | Setup, Header component, API integration |
 | Ethen Mutiso  | [@kaduskotoxic-driod](https://github.com/kaduskotoxic-driod) | Developer | Footer, Forms, Styling |
-| JOE MAINA     | [@teammate3](https://github.com/SLEEPYHALLOW254) | Developer | Navigation, Routing |
+| JOE MAINA     | [@sleepyhallow254](https://github.com/SLEEPYHALLOW254) | Developer | Navigation, Routing |
 | Team Member 4 | [@teammate3](https://github.com/teammate3) | Developer | Navigation, Routing |
 | Team Member 5 | [@teammate3](https://github.com/teammate3) | Developer | Navigation, Routing |
 | Team Member 6 | [@teammate3](https://github.com/teammate3) | Developer | Navigation, Routing |
