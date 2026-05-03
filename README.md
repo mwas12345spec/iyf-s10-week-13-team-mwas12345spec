@@ -31,7 +31,7 @@
 - Added responsive design
 - Wrote documentation
 
-### Team Member 3
+### Joe Maina
 - Created navigation menu
 - Set up React Router
 - Fixed accessibility issues
@@ -46,7 +46,7 @@
 - Set up React Router
 - Fixed accessibility issues
 
-  ### Team Member 6
+### Team Member 6
 - Created navigation menu
 - Set up React Router
 - Fixed accessibility issues
@@ -56,7 +56,7 @@
 - Set up React Router
 - Fixed accessibility issues
 
-  ### Team Member 8
+ ### Team Member 8
 - Created navigation menu
 - Set up React Router
 - Fixed accessibility issues
