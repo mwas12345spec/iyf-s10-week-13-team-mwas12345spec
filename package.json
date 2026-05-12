@@ -1,0 +1,48 @@
+{
+  "name": "linkhub",
+  "version": "1.0.0",
+  "description": "LinkHub - social community platform with authentication, groups, events, and admin dashboard",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "serve": "node server.js",
+    "build": "echo 'No build step required for static site'",
+    "lint": "echo 'Add linting tools as needed'",
+    "test": "echo 'Add testing framework as needed'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sleepyhallow254/Community-hub_group-5.git"
+  },
+  "keywords": [
+    "community",
+    "social",
+    "web-app",
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "LinkHub Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sleepyhallow254/Community-hub_group-5/issues"
+  },
+  "homepage": "https://github.com/sleepyhallow254/Community-hub_group-5#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "connect-mongo": "^5.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.4",
+    "express-session": "^1.17.3",
+    "mongoose": "^7.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
