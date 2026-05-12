@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - LinkHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="topbar-logo">LH</div>
+        <div class="topbar-search">
+          <span style="font-size: 0.85rem; color: #65676b;">🔍</span>
+          <input placeholder="Search LinkHub" />
+        </div>
+      </div>
+      <nav class="topbar-center">
+        <a href="../index.html" class="topbar-link">Home</a>
+        <a href="groups.html" class="topbar-link">Groups</a>
+        <a href="events.html" class="topbar-link">Events</a>
+      </nav>
+      <div class="topbar-right">
+        <div class="avatar-small">JM</div>
+        <span>Joe Maina</span>
+        <a href="login.html" class="chip" style="text-decoration: none;">Sign In</a>
+        <a href="admin.html" class="chip" style="text-decoration: none;">Admin</a>
+        <button id="logout-button" class="chip logout-btn" style="display: none; border: none; background: #e4e6eb;">Sign Out</button>
+        <div id="dark-mode-toggle" class="chip" style="cursor: pointer;">🌙</div>
+        <div class="chip">⋯</div>
+      </div>
+    </header>
+
+    <!-- PROFILE HEADER -->
+    <main class="layout" style="padding-top: 2rem;">
+      <section style="grid-column: 1 / -1;">
+        <div class="card" style="padding: 0;" data-profile-container>
+          <!-- Profile content will be loaded here -->
+        </div>
+
+        <!-- Profile Content -->
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; margin-top: 1rem;">
+          <!-- Main Content -->
+          <div>
+            <!-- About Section -->
+            <div class="card">
+              <h3>About</h3>
+              <p>Passionate about technology and community building. Love coding, coffee, and connecting with like-minded people. Always excited to learn something new and share knowledge with others.</p>
+              <div style="margin-top: 1rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                  <span>🎓</span>
+                  <span>Computer Science Student</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                  <span>🏠</span>
+                  <span>Lives in Nairobi, Kenya</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span>💼</span>
+                  <span>Software Developer</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Posts -->
+            <div class="card">
+              <h3>Recent Posts</h3>
+              <div class="feed">
+                <!-- Posts will be loaded here -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div>
+            <!-- Friends -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">Friends</div>
+                <div class="card-subtitle">127 friends</div>
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;">
+                <div style="text-align: center;">
+                  <div class="avatar-small" style="width: 60px; height: 60px; margin: 0 auto 0.5rem;">MK</div>
+                  <div style="font-size: 0.8rem;">Mark</div>
+                </div>
+                <div style="text-align: center;">
+                  <div class="avatar-small" style="width: 60px; height: 60px; margin: 0 auto 0.5rem;">AK</div>
+                  <div style="font-size: 0.8rem;">Amina</div>
+                </div>
+                <div style="text-align: center;">
+                  <div class="avatar-small" style="width: 60px; height: 60px; margin: 0 auto 0.5rem;">SK</div>
+                  <div style="font-size: 0.8rem;">Samuel</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Groups -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">Groups</div>
+                <div class="card-subtitle">23 groups</div>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <div class="nav-icon">👨‍💻</div>
+                  <div>
+                    <div style="font-size: 0.9rem;">Developers Group</div>
+                    <div style="font-size: 0.7rem; color: var(--muted);">12 members</div>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <div class="nav-icon">📚</div>
+                  <div>
+                    <div style="font-size: 0.9rem;">Study Circle</div>
+                    <div style="font-size: 0.7rem; color: var(--muted);">8 members</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
