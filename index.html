@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>LinkHub · Social Community Portal</title>
+    <meta
+      name="description"
+      content="LinkHub - social community portal for posts, groups, events, and local connections."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="topbar-logo">LH</div>
+        <div class="topbar-search">
+          <span style="font-size: 0.85rem; color: #65676b;">🔍</span>
+          <input placeholder="Search LinkHub" />
+        </div>
+      </div>
+      <nav class="topbar-center">
+        <div class="topbar-link active">Home</div>
+        <a href="pages/groups.html" class="topbar-link">Groups</a>
+        <a href="pages/events.html" class="topbar-link">Events</a>
+      </nav>
+      <div class="topbar-right">
+        <a href="pages/profile.html" style="text-decoration: none;"><div class="avatar-small">JM</div></a>
+        <span>Joe Maina</span>
+        <a href="pages/login.html" class="chip" style="text-decoration: none;">Sign In</a>
+        <a href="pages/admin.html" class="chip" style="text-decoration: none;">Admin</a>
+        <button id="logout-button" class="chip logout-btn" style="display: none; border: none; background: #e4e6eb;">Sign Out</button>
+        <div id="dark-mode-toggle" class="chip" style="cursor: pointer;">🌙</div>
+      </div>
+    </header>
+
+    <!-- MAIN LAYOUT -->
+    <main class="layout">
+      <!-- LEFT: navigation -->
+      <aside class="column column-left">
+        <section class="card">
+          <a href="pages/profile.html" style="text-decoration: none; color: inherit;">
+            <div class="nav-item">
+              <div class="avatar-small">JD</div>
+              <div>
+                <div class="nav-label-main">Jane Doe</div>
+                <div class="nav-label-sub">View your profile</div>
+              </div>
+            </div>
+          </a>
+        </section>
+
+        <section class="card">
+          <div class="nav-section-title">Shortcuts</div>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <div class="nav-icon">👨‍💻</div>
+              <div>
+                <div class="nav-label-main">Developers Group</div>
+                <div class="nav-label-sub">12 new posts</div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="nav-icon">📚</div>
+              <div>
+                <div class="nav-label-main">Study Circle</div>
+                <div class="nav-label-sub">3 new posts</div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="nav-icon">🤝</div>
+              <div>
+                <div class="nav-label-main">Community Volunteers</div>
+                <div class="nav-label-sub">5 new messages</div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </aside>
+
+      <!-- CENTER: stories + feed -->
+      <section class="column">
+        <!-- Stories row -->
+        <section class="card">
+          <div class="stories-row">
+            <div class="story-card">
+              <div class="story-avatar">You</div>
+              <div class="story-name">Create story</div>
+            </div>
+            <div class="story-card" style="background: linear-gradient(135deg,#ec4899,#8b5cf6);">
+              <div class="story-avatar">JD</div>
+              <div class="story-name">Jane Doe</div>
+            </div>
+            <div class="story-card" style="background: linear-gradient(135deg,#22c55e,#16a34a);">
+              <div class="story-avatar">MK</div>
+              <div class="story-name">Mark</div>
+            </div>
+            <div class="story-card" style="background: linear-gradient(135deg,#f97316,#ea580c);">
+              <div class="story-avatar">AK</div>
+              <div class="story-name">Amina</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Create post box -->
+        <section class="card">
+          <div class="create-post-row">
+            <div class="avatar-small">JD</div>
+            <input
+              id="create-input"
+              class="create-input"
+              placeholder="What's on your mind, Jane?"
+            />
+          </div>
+          <div class="create-actions">
+            <div class="create-action">
+              <span>🎥</span> <span>Live video</span>
+            </div>
+            <div class="create-action">
+              <span>📷</span> <span>Photo/video</span>
+            </div>
+            <div class="create-action">
+              <span>😊</span> <span>Feeling/activity</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Feed -->
+        <div class="feed">
+        <!-- Sample post 2 -->
+        </div>
+      </section>
+      <aside class="column column-right">
+        <section class="card">
+          <div class="card-header">
+            <div class="card-title">Community contacts</div>
+            <div class="card-subtitle">Online</div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-main">
+              <div class="avatar-small" style="width: 28px; height: 28px;">
+                MK
+              </div>
+              <span>Mark</span>
+            </div>
+            <div class="status-dot"></div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-main">
+              <div class="avatar-small" style="width: 28px; height: 28px;">
+                AK
+              </div>
+              <span>Amina</span>
+            </div>
+            <div class="status-dot"></div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-main">
+              <div class="avatar-small" style="width: 28px; height: 28px;">
+                SK
+              </div>
+              <span>Samuel</span>
+            </div>
+            <div class="status-dot"></div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <div class="card-title">About LinkHub</div>
+          </div>
+          <p class="card-subtitle">
+            This is a static HTML + CSS demo that shows how your LinkHub
+            app could look with a modern community layout. The real project uses
+            Express and MongoDB on the backend.
+          </p>
+        </section>
+      </aside>
+    </main>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
