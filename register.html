@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - LinkHub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <div class="topbar-logo">LH</div>
+      <div class="topbar-search">
+        <span style="font-size: 0.85rem; color: #65676b;">🔍</span>
+        <input placeholder="Search LinkHub" />
+      </div>
+    </div>
+    <nav class="topbar-center">
+      <a href="../index.html" class="topbar-link">Home</a>
+      <a href="groups.html" class="topbar-link">Groups</a>
+      <a href="events.html" class="topbar-link">Events</a>
+    </nav>
+    <div class="topbar-right">
+      <a href="login.html" class="chip" style="text-decoration: none;">Sign In</a>
+      <button id="logout-button" class="chip logout-btn" style="display: none; border: none; background: #e4e6eb;">Sign Out</button>
+      <div id="dark-mode-toggle" class="chip" style="cursor: pointer;">🌙</div>
+      <div class="chip">⋯</div>
+    </div>
+  </header>
+
+  <main class="layout" style="padding-top: 2rem;">
+    <section style="max-width: 520px; margin: 0 auto; width: 100%;">
+      <div class="card form-card">
+        <h1>Create your LinkHub account</h1>
+        <p>Sign up now to join groups, create events, and manage your community feed.</p>
+        <form id="register-form" class="form-row" style="margin-top: 1rem;">
+          <input type="text" name="name" placeholder="Full name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="password" name="password" placeholder="Password" required />
+          <button type="submit" class="btn-primary">Create account</button>
+          <div id="register-error" style="color: var(--danger); font-size: 0.95rem;"></div>
+        </form>
+        <div class="form-note">
+          Already have an account? <a href="login.html" class="form-link">Sign in</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/register.js"></script>
+</body>
+</html>
