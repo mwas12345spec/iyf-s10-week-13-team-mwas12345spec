@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - LinkHub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <div class="topbar-logo">LH</div>
+      <div class="topbar-search">
+        <span style="font-size: 0.85rem; color: #65676b;">🔍</span>
+        <input placeholder="Search LinkHub" />
+      </div>
+    </div>
+    <nav class="topbar-center">
+      <a href="../index.html" class="topbar-link">Home</a>
+      <a href="groups.html" class="topbar-link">Groups</a>
+      <a href="events.html" class="topbar-link">Events</a>
+    </nav>
+    <div class="topbar-right">
+      <a href="login.html" class="chip" style="text-decoration: none;">Sign In</a>
+      <button id="logout-button" class="chip logout-btn" style="display: none; border: none; background: #e4e6eb;">Sign Out</button>
+      <div id="dark-mode-toggle" class="chip" style="cursor: pointer;">🌙</div>
+    </div>
+  </header>
+
+  <main class="layout" style="padding-top: 2rem;">
+    <section style="max-width: 840px; margin: 0 auto; display: grid; gap: 1rem;">
+      <div class="card">
+        <h1>LinkHub Admin Dashboard</h1>
+        <p>Manage platform analytics, membership information, and community activity.</p>
+      </div>
+
+      <div class="card" id="admin-stats">
+        <h3>Loading admin stats…</h3>
+      </div>
+
+      <div class="card" id="admin-users">
+        <h3>Loading user list…</h3>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/admin.js"></script>
+</body>
+</html>
