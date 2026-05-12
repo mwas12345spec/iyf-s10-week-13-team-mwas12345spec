@@ -1,0 +1,202 @@
+{
+  "profile": {
+    "name": "Joe Maina",
+    "avatar": "JM",
+    "location": "Nairobi, Kenya",
+    "headline": "Product Designer · Community Advocate",
+    "friends": 127,
+    "groups": 23,
+    "eventsAttended": 45
+  },
+  "users": [
+    {
+      "id": 1,
+      "name": "Joe Maina",
+      "email": "joe@linkhub.com",
+      "avatar": "JM",
+      "role": "admin",
+      "passwordHash": "$2b$10$Xr.QcSkZkQJ6tImV/kdF0OOWoNqZs0zxcWQb7czz12v4I8FvAoa9W"
+    },
+    {
+      "id": 2,
+      "name": "Mark Owino",
+      "email": "mark@linkhub.com",
+      "avatar": "MO",
+      "role": "member",
+      "passwordHash": "$2b$10$j0LufPdyN1z8EXE7G.zZeONp2wF6jK5VhXg1E7V9SPxYFmPP6KirK"
+    },
+    {
+      "id": 1778322432023,
+      "name": "Test User",
+      "email": "testuser_bb@example.com",
+      "avatar": "TU",
+      "role": "member",
+      "passwordHash": "$2b$10$4UikwD5heLeabS1fUxaduecECxeVQFRCI9zHJSiULow62lKdICq7m"
+    },
+    {
+      "id": 1778322523546,
+      "name": "Test User 2",
+      "email": "testuser_2_bb@example.com",
+      "avatar": "TU",
+      "role": "member",
+      "passwordHash": "$2b$10$Ano3PkDL435qkYmtX/C1n.31WLNqSx/UNx4tMenDj3fS.KGvu8SkW"
+    },
+    {
+      "id": 1778322604392,
+      "name": "Check",
+      "email": "check_1778322603814@example.com",
+      "avatar": "C",
+      "role": "member",
+      "passwordHash": "$2b$10$hn8TEcv14MGIFidOmTrFM.U7mFMQNBiIhOCOnhXJbYoS0BJEIJj1a"
+    },
+    {
+      "id": 1778322678687,
+      "name": "FinalCheck",
+      "email": "final_1778322678105@example.com",
+      "avatar": "F",
+      "role": "member",
+      "passwordHash": "$2b$10$NcscG1fDeyWO05XSIWehZ.ol8GCgyDXDLMadjwX2ulI7biOJbXtee"
+    },
+    {
+      "id": 1778322850977,
+      "name": "Denzel",
+      "email": "denzelanyiko3@gmail.com",
+      "avatar": "D",
+      "role": "member",
+      "passwordHash": "$2b$10$sfn5Krq7GdYVcT3iptCKQ.mdx6In.o.K6E7RRgOqTD6RqG6FuGzpC"
+    },
+    {
+      "id": 1778322863569,
+      "name": "Final",
+      "email": "final_1778322862831@example.com",
+      "avatar": "F",
+      "role": "member",
+      "passwordHash": "$2b$10$9uKJ4EMBHnVBs83E4eWe6.h9RGlH3PIwUUasN8j8cSZhwZ/KBFVva"
+    },
+    {
+      "id": 1778324465237,
+      "name": "Test User",
+      "email": "test1778324464831@x.com",
+      "avatar": "TU",
+      "role": "member",
+      "passwordHash": "$2b$10$V9AgieEOr3cPoKxQLVS/PuTJCuHkpmg7nn2F4WH3CXTLOR1KX7hWG"
+    },
+    {
+      "id": 1778324597245,
+      "name": "BrowserTest1778324596671",
+      "email": "bt1778324596671@x.com",
+      "avatar": "B",
+      "role": "member",
+      "passwordHash": "$2b$10$X9uJX9gms540prWDkZCP7.9rJ8mqIFRyYq0UELfOOvcVsFgwNUawy"
+    },
+    {
+      "id": 1778325629908,
+      "name": "T1778325629272",
+      "email": "t1778325629272@x.com",
+      "avatar": "T",
+      "role": "member",
+      "passwordHash": "$2b$10$rpqqWiqyad02xqlltyuKLekJyI2UK2XxW878BE7VAbSPAPRbXKliu"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "author": "Joe Maina",
+      "avatar": "JM",
+      "time": "Just now",
+      "location": "LinkHub",
+      "icon": "🌍",
+      "text": "Welcome to LinkHub! This is our social community feed for posts, groups, and neighborhood events.",
+      "likes": 5,
+      "comments": [
+        {
+          "author": "Mark Owino",
+          "avatar": "MO",
+          "text": "This looks great! Can't wait to use LinkHub."
+        },
+        {
+          "author": "Amina Wanjiru",
+          "avatar": "AW",
+          "text": "Nice social dashboard! Very familiar and easy to use."
+        },
+        {
+          "author": "Joe Maina",
+          "avatar": "JM",
+          "text": "yes"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "author": "LinkHub Team",
+      "avatar": "LH",
+      "time": "2 hrs",
+      "location": "Event",
+      "icon": "📍 Nairobi",
+      "text": "We are hosting a weekend coding meetup! Bring your laptop, your project ideas, and questions. Everyone from beginner to advanced is welcome.",
+      "likes": 18,
+      "comments": []
+    }
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "name": "Nairobi Dev Collective",
+      "emoji": "👨‍💻",
+      "members": 12,
+      "description": "Software developers and makers sharing tools, projects, and local meetups."
+    },
+    {
+      "id": 2,
+      "name": "City Study Squad",
+      "emoji": "📚",
+      "members": 8,
+      "description": "Students and learners sharing study tips, resources, and motivation for academic success."
+    },
+    {
+      "id": 3,
+      "name": "Volunteer Network",
+      "emoji": "🤝",
+      "members": 15,
+      "description": "Connecting volunteers to local service projects and community support efforts."
+    }
+  ],
+  "events": [
+    {
+      "id": 1778317344066,
+      "name": "Graduation",
+      "date": "2026-05-23",
+      "location": "Mahanaim College",
+      "time": "09:00",
+      "attending": 3000,
+      "description": "Graduation of the season 10 IYF we can academy students"
+    },
+    {
+      "id": 1,
+      "name": "Weekend Coding Meetup",
+      "date": "2026-12-15",
+      "location": "Nairobi Tech Hub",
+      "time": "2:00 PM - 6:00 PM",
+      "attending": 18,
+      "description": "Join us for an intensive coding session! Bring your laptop and work on projects, or get help with coding challenges. All skill levels welcome."
+    },
+    {
+      "id": 2,
+      "name": "Community Volunteer Day",
+      "date": "2026-12-20",
+      "location": "Central Park",
+      "time": "9:00 AM - 4:00 PM",
+      "attending": 24,
+      "description": "Help make our community better! Join us for a day of volunteering - clean up parks, help at local shelters, and give back to the community."
+    },
+    {
+      "id": 3,
+      "name": "Holiday Tech Conference",
+      "date": "2026-12-25",
+      "location": "Convention Center",
+      "time": "10:00 AM - 8:00 PM",
+      "attending": 67,
+      "description": "Celebrate the holidays with fellow tech enthusiasts! Talks, workshops, networking, and festive activities. Special holiday pricing available."
+    }
+  ]
+}
