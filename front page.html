@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>You & Me</title>
+    <meta
+      name="description"
+      content="You & Me- a simple community platform to share posts and comments."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary: #2563eb;
+        --primary-dark: #1d4ed8;
+        --background: #f3f4f6;
+        --text: #111827;
+        --muted: #6b7280;
+        --border: #e5e7eb;
+        --danger: #dc2626;
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        background: var(--background);
+        color: var(--text);
+      }
+
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      .main {
+        padding: 1.5rem 0 3rem;
+        min-height: calc(100vh - 120px);
+      }
+
+      /* Navbar */
+
+      .navbar {
+        background: #111827;
+        color: #f9fafb;
+      }
+
+      .navbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 0;
+      }
+
+      .logo {
+        font-weight: 700;
+        font-size: 1.25rem;
+        color: #f9fafb;
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .nav-user {
+        font-size: 0.9rem;
+        color: #d1d5db;
+      }
+
+      /* Buttons */
+
+      .btn {
+        border-radius: 999px;
+        border: 1px solid transparent;
+        padding: 0.4rem 0.9rem;
+        font-size: 0.9rem;
+        cursor: pointer;
+        background: #e5e7eb;
+        color: #111827;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.25rem;
+      }
+
+      .btn-sm {
+        padding: 0.3rem 0.7rem;
+        font-size: 0.8rem;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: #f9fafb;
+      }
+
+      .btn-primary:hover {
+        background: var(--primary-dark);
+      }
+
+      .btn-outline {
+        background: transparent;
+        border-color: #d1d5db;
+        color: #f9fafb;
+      }
+
+      .btn-outline:hover {
+        background: #374151;
+      }
+
+      /* Cards */
+
+      .card {
+        background: #ffffff;
+        border-radius: 0.75rem;
+        border: 1px solid var(--border);
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+      }
+
+      /* Forms */
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      .label {
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      .input,
+      .textarea {
+        border-radius: 0.5rem;
+        border: 1px solid var(--border);
+        padding: 0.55rem 0.7rem;
+        font-size: 0.9rem;
+        outline: none;
+        transition: border-color 0.15s, box-shadow 0.15s;
+        font-family: inherit;
+      }
+
+      .input:focus,
+      .textarea:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.35);
+      }
+
+      .textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .form-actions {
+        margin-top: 0.5rem;
+        display: flex;
+        gap: 0.5rem;
+        justify-content: flex-end;
+      }
+
+      /* Typography */
+
+      .page-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+      }
+
+      .page-subtitle {
+        font-size: 0.95rem;
+        color: var(--muted);
+        margin-bottom: 1.25rem;
+      }
+
+      .error-text {
+        color: var(--danger);
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+      }
+
+      /* Posts list */
+
+      .posts-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.75rem;
+      }
+
+      .posts-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .post-item {
+        border-bottom: 1px solid var(--border);
+        padding: 0.75rem 0;
+      }
+
+      .post-item:last-child {
+        border-bottom: none;
+      }
+
+      .post-title {
+        font-weight: 600;
+        margin: 0 0 0.2rem;
+      }
+
+      .post-meta {
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+
+      .post-excerpt {
+        font-size: 0.9rem;
+        margin-top: 0.3rem;
+      }
+
+      /* Post detail */
+
+      .post-detail-header {
+        margin-bottom: 0.75rem;
+      }
+
+      .post-detail-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin: 0 0 0.25rem;
+      }
+
+      .post-detail-meta {
+        font-size: 0.85rem;
+        color: var(--muted);
+        margin-bottom: 0.75rem;
+      }
+
+      .post-detail-content {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        white-space: pre-wrap;
+      }
+
+      .post-actions {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 0.75rem;
+      }
+
+      /* Comments */
+
+      .comments-section {
+        margin-top: 1.5rem;
+      }
+
+      .comments-header {
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+      }
+
+      .comment-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .comment-item {
+        border-top: 1px solid var(--border);
+        padding: 0.6rem 0;
+      }
+
+      .comment-meta {
+        font-size: 0.8rem;
+        color: var(--muted);
+        margin-bottom: 0.15rem;
+      }
+
+      .comment-text {
+        font-size: 0.9rem;
+      }
+
+      .comment-inline-form {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 0.75rem;
+      }
+
+      .comment-inline-input {
+        flex: 1;
+      }
+
+      /* Footer */
+
+      .footer {
+        border-top: 1px solid var(--border);
+        padding: 0.75rem 0;
+        font-size: 0.85rem;
+        color: var(--muted);
+        background: #f9fafb;
+        text-align: center;
+      }
+
+      /* Responsive */
+
+      @media (max-width: 640px) {
+        .navbar-inner {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5rem;
+        }
+
+        .nav-links {
+          width: 100%;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+        }
+
+        .main {
+          padding-top: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="navbar-inner container">
+        <a href="#" class="logo">You & Me</a>
+        <div class="nav-links">
+          <!-- Fake "logged in" user -->
+          <span class="nav-user" id="nav-user">Hi, Jane Doe</span>
+          <button class="btn btn-primary btn-sm" onclick="scrollToNewPost()">
+            New Post
+          </button>
+          <button class="btn btn-outline btn-sm" onclick="alert('This is a static demo. In the real app, this logs out.')">
+            Logout
+          </button>
+        </div>
+      </div>
+    </nav>
+
+      <!-- MAIN CONTENT -->
+      <main class="main container">
+        <!-- Posts feed -->
+        <section>
+          <div class="posts-header">
+            <div>
+              <h1 class="page-title">Latest posts</h1>
+              <p class="page-subtitle">
+                See what people in your community are talking about.
+              </p>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="scrollToNewPost()">
+              + New Post
+            </button>
+          </div>
+
+          <div class="card">
+            <ul class="posts-list" id="posts-list">
+              <!-- Example post 1 -->
+              <li class="post-item">
+                <h2 class="post-title">You & Melaunched today 🎉</h2>
+                <div class="post-meta">
+                  By Jane Doe · 2026-04-05 · <span class="like-count">3</span>
+                  likes
+                </div>
+                <p class="post-excerpt">
+                  Welcome to You & Me! This is a place where you can share
+                  updates, ask questions, and connect with others in your
+                  community...
+                </p>
+              </li>
+
+              <!-- Example post 2 -->
+              <li class="post-item">
+                <h2 class="post-title">Weekend coding meetup in Nairobi</h2>
+                <div class="post-meta">
+                  By John Kimani · 2026-04-04 · <span class="like-count"
+                    >5</span
+                  >
+                  likes
+                </div>
+                <p class="post-excerpt">
+                  We are organizing a small meetup this Saturday to work on
+                  projects together, share tips, and help each other with bug
+                  fixing. Everyone is welcome!
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Single post "detail" preview -->
+        <section style="margin-top: 1.5rem;">
+          <div class="card">
+            <div class="post-detail-header">
+              <h1 class="post-detail-title">You & Melaunched today 🎉</h1>
+              <div class="post-detail-meta">
+                By Jane Doe · 2026-04-05 10:24
+              </div>
+            </div>
+            <div class="post-detail-content">
+Welcome to You & Me!
+
+This is a simple community platform where you can:
+- Register and log in
+- Create posts
+- Like posts
+- Comment on posts
+
+Everything you see here in the demo is static HTML, but in the real app it connects to an API and a MongoDB database.</div>
+            <div class="post-actions">
+              <button
+                class="btn btn-outline btn-sm"
+                id="like-button"
+                onclick="demoLike()"
+              >
+                ❤️ <span id="like-count">3</span> likes
+              </button>
+              <button
+                class="btn btn-sm"
+                onclick="alert('In the real app, this would navigate back to the list.')"
+              >
+                Back
+              </button>
+            </div>
+          </div>
+
+          <!-- Comments -->
+          <div class="card comments-section">
+            <div class="comments-header">Comments</div>
+            <ul class="comment-list" id="comment-list">
+              <li class="comment-item">
+                <div class="comment-meta">
+                  Alex · 2026-04-05 11:02
+                </div>
+                <div class="comment-text">
+                  Congratulations on launching You & Me Looking forward to
+                  using it.
+                </div>
+              </li>
+              <li class="comment-item">
+                <div class="comment-meta">
+                  Mary · 2026-04-05 12:10
+                </div>
+                <div class="comment-text">
+                  Great work! The UI looks clean and simple.
+                </div>
+              </li>
+            </ul>
+
+            <form
+              class="comment-inline-form"
+              onsubmit="demoAddComment(event)"
+            >
+              <input
+                class="input comment-inline-input"
+                id="new-comment-input"
+                placeholder="Add a comment..."
+              />
+              <button class="btn btn-primary btn-sm">
+                Comment
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!-- New post form preview -->
+        <section id="new-post-section" style="margin-top: 1.5rem;">
+          <div class="card">
+            <h1 class="page-title">Create a post</h1>
+            <p class="page-subtitle">
+              This is how the "New Post" screen looks in You & Me.
+            </p>
+            <form class="form" onsubmit="demoCreatePost(event)">
+              <div class="form-group">
+                <label class="label" for="title">==++++
+                  Title
+                </label>
+                <input
+                  id="title"
+                  class="input"
+                  name="title"
+                  placeholder="What do you want to share?"
+                />
+              </div>
+              <div class="form-group">
+                <label class="label" for="content">
+                  Content
+                </label>
+                <textarea
+                  id="content"
+                  class="textarea"
+                  name="content"
+                  placeholder="Write your thoughts here..."
+                ></textarea>
+              </div>
+              <div class="form-actions">
+                <button class="btn btn-primary">
+                  Publish (demo)
+                </button>
+              </div>
+              <p class="page-subtitle" id="demo-message" style="margin-top: 0.5rem;"></p>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="container">
+          <p>CommunityHub · Static demo of how the app works</p>
+        </div>
+      </footer>
+
+      <script>
+        // Simple JS to simulate likes, comments, and create post (no backend)
+
+        function demoLike() {
+          const span = document.getElementById("like-count");
+          let value = parseInt(span.textContent || "0", 10);
+          value++;
+          span.textContent = value;
+        }
+
+        function demoAddComment(e) {
+          e.preventDefault();
+          const input = document.getElementById("new-comment-input");
+          const text = input.value.trim();
+          if (!text) return;
+          const list = document.getElementById("comment-list");
+
+          const li = document.createElement("li");
+          li.className = "comment-item";
+
+          const meta = document.createElement("div");
+          meta.className = "comment-meta";
+          meta.textContent = "You · just now";
+
+          const body = document.createElement("div");
+          body.className = "comment-text";
+          body.textContent = text;
+
+          li.appendChild(meta);
+          li.appendChild(body);
+          list.appendChild(li);
+
+          input.value = "";
+        }
+
+        function demoCreatePost(e) {
+          e.preventDefault();
+          const titleInput = document.getElementById("title");
+          const contentInput = document.getElementById("content");
+          const msg = document.getElementById("demo-message");
+
+          const title = titleInput.value.trim();
+          const content = contentInput.value.trim();
+
+          if (!title || !content) {
+            msg.style.color = "#dc2626";
+            msg.textContent = "Please enter a title and content.";
+            return;
+          }
+
+          msg.style.color = "#16a34a";
+          msg.textContent =
+            "In the real app, this would send your post to the API and add it to the feed.";
+
+          // Optionally add to the top of the list visually
+          const list = document.getElementById("posts-list");
+          const li = document.createElement("li");
+          li.className = "post-item";
+          li.innerHTML = `
+            <h2 class="post-title">${title}</h2>
+            <div class="post-meta">
+              By You · just now · <span class="like-count">0</span> likes
+            </div>
+            <p class="post-excerpt">
+              ${content.length > 120 ? content.slice(0, 120) + "..." : content}
+            </p>
+          `;
+          list.insertBefore(li, list.firstChild);
+
+          titleInput.value = "";
+          contentInput.value = "";
+        }
+
+        function scrollToNewPost() {
+          const section = document.getElementById("new-post-section");
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      </script>
+  </body>
+</html>
