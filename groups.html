@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groups - LinkHub</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="topbar-logo">LH</div>
+        <div class="topbar-search">
+          <span style="font-size: 0.85rem; color: #65676b;">🔍</span>
+          <input placeholder="Search LinkHub groups" />
+        </div>
+      </div>
+      <nav class="topbar-center">
+        <a href="../index.html" class="topbar-link">Home</a>
+        <a href="groups.html" class="topbar-link active">Groups</a>
+        <a href="events.html" class="topbar-link">Events</a>
+      </nav>
+      <div class="topbar-right">
+        <div class="avatar-small">JM</div>
+        <span>Joe Maina</span>
+        <a href="login.html" class="chip" style="text-decoration: none;">Sign In</a>
+        <a href="admin.html" class="chip" style="text-decoration: none;">Admin</a>
+        <button id="logout-button" class="chip logout-btn" style="display: none; border: none; background: #e4e6eb;">Sign Out</button>
+        <div id="dark-mode-toggle" class="chip" style="cursor: pointer;">🌙</div>
+        <div class="chip">⋯</div>
+      </div>
+    </header>
+
+    <main class="layout" style="padding-top: 2rem;">
+      <!-- MAIN CONTENT -->
+      <section style="grid-column: 1 / -1;">
+        <div style="margin-bottom: 2rem;">
+          <h1 style="margin: 0 0 1rem;">Community Groups</h1>
+          <p style="color: var(--muted); margin: 0;">Join groups that interest you and connect with like-minded people.</p>
+        </div>
+
+        <!-- Create Group -->
+        <div class="card" style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; margin-bottom: 2rem;">
+          <h3 style="margin: 0 0 0.5rem;">Create a New Group</h3>
+          <p style="margin: 0 0 1rem;">Start your own community around shared interests.</p>
+          <form id="create-group-form" style="display: grid; gap: 0.75rem;">
+            <input name="emoji" placeholder="Emoji (e.g. 👥)" style="padding: 0.75rem; border-radius: 0.5rem; border: none;" />
+            <input name="name" placeholder="Group name" required style="padding: 0.75rem; border-radius: 0.5rem; border: none;" />
+            <input name="members" type="number" placeholder="Initial members" min="0" style="padding: 0.75rem; border-radius: 0.5rem; border: none;" />
+            <textarea name="description" placeholder="Group description" required style="padding: 0.75rem; border-radius: 0.5rem; border: none; resize: vertical;"></textarea>
+            <button type="submit" style="background: white; color: var(--primary); border: none; padding: 0.75rem 1rem; border-radius: 0.5rem; cursor: pointer; font-weight: 600;">
+              + Create Group
+            </button>
+          </form>
+        </div>
+
+        <!-- Groups Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem;" data-groups-container>
+          <!-- Group cards will be loaded here -->
+        </div>
+      </section>
+    </main>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>
